@@ -13,7 +13,7 @@ const PORT = process.env.PORT;
 
 app.use(express.json());
 
-mongoose.connect("mongodb://localhost:27017/digimon");
+mongoose.connect(process.env.DATABASE_URL);
 
 const digimonSchema = new mongoose.Schema({
   digimonName: String,
